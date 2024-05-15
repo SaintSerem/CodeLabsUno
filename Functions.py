@@ -33,10 +33,10 @@ def write_data(data, output_file):
     except PermissionError:
         print(f"Error: Cannot write to: {output_file}")
 
-def fix_date_format(data):
+#def fix_date_format(data):
 
     # Fixes the format of the DoB column
-    if 'DoB' in data.columns:  # Check if DoB column exists
-        data['DoB'] = pd.to_datetime(data['DoB']).dt.strftime('%Y-%m-%d')  # Remove time that appears in the DOB column
+    #if 'DoB' in data.columns:  # Check if DoB column exists
+     #   data['DoB'] = pd.to_datetime(data['DoB']).dt.strftime('%Y-%m-%d')  # Remove time that appears in the DOB column
 
     return data

@@ -1,19 +1,20 @@
+# Importation of libraries
 import pandas as pd
-
-from Functions import generate_unique_email, read_data, write_data, fix_date_format
+from Functions import generate_unique_email, read_data, write_data
 from Constraints import validate_data,is_valid_email_format
-# Replace with your actual file path
+
+
+
 input_file = "C:\\Users\\brian\\OneDrive\\Documents\\Test Files.xlsx"
 output_file = "output.xlsx"
 
 # Read data from the excel (Test Files)
 data = read_data(input_file)
 
-# Optional: Fix DoB format (if DoB column exists)
-# Uncomment the following line if you want to fix the DoB format
-data = fix_date_format(data)
 
-# Check if data was read successfully
+data = (data)
+
+
 if data is not None:
     # Adding the email addresses to the column
     data['Email Address'] = data['Student Name'].apply(generate_unique_email, args=(data,))

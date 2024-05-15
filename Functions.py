@@ -10,7 +10,7 @@ def generate_unique_email(name, data):
     first_letter = names[0][0].lower()
     last_name = names[1] if len(names) > 1 else names[0]
 
-    base_email = f"{first_letter}.{last_name}"
+    base_email = f"{first_letter}{last_name}"
     random_number = ""
     while base_email in data['Email Address'].tolist():
         random_number = f"{random.randint(1, 99)}"  # Random number 1-99 (inclusive)
@@ -22,12 +22,7 @@ def generate_unique_email(name, data):
 
 def read_data(file_path):
 
-
-    try:
         return pd.read_excel(file_path)
-    except FileNotFoundError:
-        print(f"Error: File not found at {file_path}")
-        return None
 
 def write_data(data, output_file):
 

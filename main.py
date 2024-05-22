@@ -1,7 +1,7 @@
-# Importation of libraries
+# Importing  libraries
+
 import pandas as pd
-from Functions import generate_unique_email, read_data, write_data
-from Constraints import validate_data,is_valid_email_format
+from functions import generate_unique_email, read_data, write_data
 
 
 

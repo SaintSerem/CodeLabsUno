@@ -1,3 +1,6 @@
+import os
+
+os.rename('Constraints.py', 'constraints.py')
 def validate_data(data):
 
     pass

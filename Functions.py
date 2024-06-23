@@ -27,7 +27,7 @@ def separate_genders(data):
 
 def find_special_characters(names):
 
-    pattern = r"[^\w\s]"  # Match characters that are not alphanumeric or whitespace
+    pattern = r"[^\w\s]"  # Matching characters that are not alphanumeric or whitespace
     special_names = [name for name in names if re.search(pattern, name)]
     return special_names
 
